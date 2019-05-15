@@ -1,0 +1,15 @@
+<form [formGroup]="empFormGroup" (ngSubmit)="onFormSubmit()"  method="post">
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" id="name" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label>Salary</label>
+    <input type="text" class="form-control" id="salary" formControlName="salary">
+  </div>
+  <div class="form-group">
+    <label>Age</label>
+    <input type="text" class="form-control" id="age" formControlName="age">
+  </div>
+  <div><button class="btn btn-success" type="submit">Submit</button></div>
+</form>

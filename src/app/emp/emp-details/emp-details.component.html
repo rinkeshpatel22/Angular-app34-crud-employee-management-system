@@ -1,0 +1,32 @@
+<div class="details">
+  <div>
+    <h5>Details:</h5>
+    <!-- details -->
+    <div *ngIf="!isEditFormOpen">
+      <div class="row">
+        <div class="col-12">Name: {{employee.employee_name}}</div>
+        <div class="col-4">Id: {{employee.id}}</div>
+        <div class="col-4">Salary: {{employee.employee_salary}}</div>
+        <div class="col-4">Age: {{employee.employee_age}}</div>
+      </div>
+    </div>
+    <!-- edit form -->
+    <div *ngIf="isEditFormOpen">
+      <app-emp-form [empEditData]="employee" 
+                    (formSubmitEvent)="editFormSubmit($event)">
+      </app-emp-form>
+    </div>
+    <!-- footer -->
+    <div class="row pt-10 details-footer"> 
+      <div class="col-md-4">
+        <button class="btn btn-danger" (click)="onClickDelete()">Delete</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" class="btn btn-primary" (click)="isEditFormOpen = !isEditFormOpen">{{isEditFormOpen? 'Cancel': 'Edit'}}</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary" (click)="onClickClose()">close</button>
+      </div>
+    </div>
+  </div>
+</div>

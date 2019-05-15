@@ -1,0 +1,21 @@
+button{
+    margin: 0 10px;
+    cursor: pointer;
+}
+.row{
+    padding: 5px;
+}
+.create-form, .emp-list{
+    box-shadow: 0px 0px 10px 5px #bbb;
+    padding: 15px;
+    margin-top: 20px;
+}
+h3{
+    text-decoration: underline;
+    font-weight: 700;
+    color: gray;
+}
+h5{
+    font-weight: 700;
+    color: #777;
+}
