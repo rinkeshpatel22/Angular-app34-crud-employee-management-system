@@ -19,7 +19,7 @@
               (click)="empDetailsId = emp.id; isDetailsOpen=true">Details</button>
               <!-- emp-details component -->
             <app-emp-details  class="col-md-10" 
-                              ngIf="empDetailsId == emp.id && isDetailsOpen==true" 
+                              *ngIf="empDetailsId == emp.id && isDetailsOpen==true" 
                               [employee]="emp"
                               (deleteEvent)="deleteEmp(emp.id)" 
                               (editEvent)="editEmp($event)" 
